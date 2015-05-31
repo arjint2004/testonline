@@ -1,0 +1,24 @@
+[01/12/2015 1:33 AM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+mc_gross=5.00, protection_eligibility=Eligible, address_status=confirmed, payer_id=LW2TC9P6WE9DY, tax=0.00, address_street=1 Main St, payment_date=23:33:31 Jan 11, 2015 PST, payment_status=Completed, charset=windows-1252, address_zip=95131, first_name=samson, mc_fee=0.45, address_country_code=US, address_name=samson karanja, notify_version=3.8, custom=18, payer_status=verified, business=sammkaranja-facilitator@gmail.com, address_country=United States, address_city=San Jose, quantity=1, verify_sign=AVR6epAoXaD0HgmTMa3gX7tx781GAka4wLpNvqSzgG0qSc58-Rx7BRQB, payer_email=samsonngash@yahoo.com, txn_id=862348820R844262X, payment_type=instant, last_name=karanja, address_state=CA, receiver_email=sammkaranja-facilitator@gmail.com, payment_fee=0.45, receiver_id=QLPY8ZPE78W6A, txn_type=web_accept, item_name=Exam - PHP Basics, mc_currency=USD, item_number=, residence_country=US, test_ipn=1, handling_amount=0.00, transaction_subject=18, payment_gross=5.00, shipping=0.00, ipn_track_id=37c4c4908a143, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Found
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Connection: close
+Content-Length: 0
+
+
+
+[01/12/2015 1:42 AM] - FAIL: IPN Validation Failed.
+IPN POST Vars from Paypal:
+residence_country=US, invoice=abc1234, address_city=San Jose, first_name=John, payer_id=TESTBUYERID01, shipping=3.04, mc_fee=0.44, txn_id=887691385, receiver_email=seller@paypalsandbox.com, quantity=1, custom=xyz123, payment_date=23:41:44 11 Jan 2015 PST, address_country_code=US, address_zip=95131, tax=2.02, item_name=something, address_name=John Smith, last_name=Smith, receiver_id=seller@paypalsandbox.com, item_number=AK-1234, verify_sign=AChxURHaVHXSD.kPmJNW6niQYpHpAZe-OLO1RqL6v8HC-q98TKzkuTlY, address_country=United States, payment_status=Completed, address_status=confirmed, business=seller@paypalsandbox.com, payer_email=buyer@paypalsandbox.com, notify_version=2.1, txn_type=web_accept, test_ipn=1, payer_status=verified, mc_currency=USD, mc_gross=12.34, address_state=CA, mc_gross1=9.34, payment_type=instant, address_street=123, any street, 
+IPN Response from Paypal Server:
+ HTTP/1.0 302 Found
+Location: https://www.sandbox.paypal.com
+Server: BigIP
+Connection: close
+Content-Length: 0
+
+
+
