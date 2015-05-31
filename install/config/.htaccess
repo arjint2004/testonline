@@ -1,6 +1,6 @@
 RewriteEngine on
 
-RewriteBase /studentbookexam3
+%rewrite_base%
 
 # Prevent CI index.php
 RewriteCond %{REQUEST_FILENAME} !-f
