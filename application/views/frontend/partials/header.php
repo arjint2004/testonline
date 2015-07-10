@@ -36,7 +36,8 @@
         <ul class="nav navbar-nav">
 
         <?php if (!$this->ion_auth->logged_in()) { ?>
-        <li <?php echo ($menu == 'login') ? 'class="active"' : ''; ?>><a href="<?php echo site_url('main/login'); ?>" id="login_link" class="btn toggle-modal"><i class="fa fa-unlock"></i> LOGIN</a></li>
+        <li <?php echo ($menu == 'login') ? 'class="active"' : ''; ?>><a href="<?php echo site_url('main/login'); ?>" id="login_link" class="btn toggle-modal"><i class="fa fa-unlock"></i> LOGIN (DAFTAR)</a></li>
+        <li <?php echo ($menu == 'login') ? 'class="active"' : ''; ?>><a href="<?php echo site_url('main/createtest'); ?>" id="login_link" class="btn toggle-modal"><i class="fa fa-plus"></i> BUAT TESTONLINE</a></li>
         <?php } else {
           $user =  $this->ion_auth->user()->row();
           ?>

@@ -70,6 +70,12 @@ class Main extends Frontend_Controller {
         ->set('page_title', 'Login')
         ->build($this->user_folder.'/login_modal');
 	}
+	public function createtest(){
+		$this->template->title('Login Panel')
+        ->set_layout($this->modal_tpl)
+        ->set('page_title', 'Buat Test Online')
+        ->build($this->user_folder.'/create_test');
+	}
 	public function register(){
 		$this->form_validation->set_rules('first_name', 'first name', 'required|xss_clean');
 		$this->form_validation->set_rules('last_name', 'last name', 'required|xss_clean');
@@ -91,8 +97,9 @@ class Main extends Frontend_Controller {
 				'company'    => $this->input->post('company'),
 				'phone'      => $this->input->post('phone'),
 			);
-
-			if($this->ion_auth->register($username, $password, $email, $additional_data))
+			$groups=array();
+			if(isset($_POST['id_group'])){$groups=array($_POST['id_group']);}
+			if($this->ion_auth->register($username, $password, $email, $additional_data,$groups))
 			{
 				$response = array(
 					'success'           => 1,

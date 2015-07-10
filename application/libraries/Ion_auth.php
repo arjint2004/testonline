@@ -459,14 +459,25 @@ class Ion_auth
 	 * @return bool
 	 * @author Ben Edmunds
 	 **/
-	public function is_admin($id=false)
+	public function is_admin($id=false,$groupasb='admin_group')
+	{
+		$this->ion_auth_model->trigger_events('is_admin');
+
+		$admin_group = $this->config->item($groupasb, 'ion_auth');
+		//print_r($this->in_group($admin_group, $id));
+		//print_r($admin_group);
+		//die();
+		return $this->in_group($admin_group, $id);
+	}
+	/*	public function is_admin($id=false)
 	{
 		$this->ion_auth_model->trigger_events('is_admin');
 
 		$admin_group = $this->config->item('admin_group', 'ion_auth');
-
+		//print_r($admin_group);
+		//die();
 		return $this->in_group($admin_group, $id);
-	}
+	}*/
 
 	/**
 	 * in_group

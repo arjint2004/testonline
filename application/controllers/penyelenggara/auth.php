@@ -32,12 +32,12 @@ class Auth extends Backend_Controller {
 					$this->session->set_flashdata('message', $this->ion_auth->messages());
 					//echo 'login admin';
 					//die();
-					redirect('admin/dashboard');
+					//redirect('penyelenggara/dashboard');
 				}elseif($this->ion_auth->is_admin($this->session->userdata('user_id'),'penyelenggara_group')) {
 					$this->session->set_flashdata('message', $this->ion_auth->messages());
 					//echo 'login penyelenggara';
 					//die();
-					redirect('penyelenggara/dashboard');
+					//redirect('penyelenggara/dashboard');
 				}
 				else{
 					redirect('', 'refresh');
@@ -50,7 +50,7 @@ class Auth extends Backend_Controller {
 				//if the login was un-successful
 				//redirect them back to the login page
 				$this->session->set_flashdata('error', $this->ion_auth->errors());
-				redirect('admin/auth'); //use redirects instead of loading views for compatibility with MY_Controller libraries
+				//redirect('penyelenggara/auth'); //use redirects instead of loading views for compatibility with MY_Controller libraries
 			}
 		}
 		else
@@ -75,7 +75,7 @@ class Auth extends Backend_Controller {
 
 		//redirect them to the login page
 		$this->session->set_flashdata('success', $this->ion_auth->messages());
-		redirect('admin/auth', 'refresh');
+		redirect('penyelenggara/auth', 'refresh');
 	}
 
 

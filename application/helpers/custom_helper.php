@@ -66,6 +66,10 @@ function edit_btn($link = ''){
 	$display = '<a href="'.site_url($link).'" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i> Edit</a>';
 	return $display;
 }
+function share_btn($link = ''){
+	$display = '<a href="'.site_url($link).'" class="btn btn-primary btn-sm toggle-modal"><i class="fa fa-share-alt"></i> Share</a>';
+	return $display;
+}
 function view_btn($link = ''){
 	$display = '<a href="'.site_url($link).'" class="btn btn-primary btn-sm toggle-modal"><i class="fa fa-eye"></i> View</a>';
 	return $display;

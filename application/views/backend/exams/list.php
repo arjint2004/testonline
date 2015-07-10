@@ -33,6 +33,7 @@
                     <?php echo view_btn('admin/exams/view/'.$exam->id); ?>
                     <?php echo edit_btn('admin/exams/edit/'.$exam->id); ?>
                     <?php echo delete_btn('admin/exams/delete/'.$exam->id); ?>
+                    <?php echo share_btn('admin/exams/share/'.$exam->id); ?>
                 </td>
             	</tr>
             <?php		$count++;	# code...

@@ -1,5 +1,5 @@
 <header class="header">
-<?php echo anchor(base_url(), 'OES Pro', "class='logo'");  ?>
+<?php echo anchor(base_url(), 'SB ONLINE TEST', "class='logo'");  ?>
 <!-- Header Navbar: style can be found in header.less -->
 <nav class="navbar navbar-static-top" role="navigation">
     <!-- Sidebar toggle button-->
